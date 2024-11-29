@@ -71,7 +71,7 @@ Before running the project, ensure you have the following installed:
 ## API Documentation
 ### Authentication APIs
 1. **Register User**
-   - **URL**: `/api/register/`
+   - **URL**: `/auth/register/`
    - **Method**: POST
    - **Input**:
      ```json
@@ -89,7 +89,7 @@ Before running the project, ensure you have the following installed:
      ```
 
 2. **Login User**
-   - **URL**: `/api/login/`
+   - **URL**: `/auth/login/`
    - **Method**: POST
    - **Input**:
      ```json
@@ -101,12 +101,13 @@ Before running the project, ensure you have the following installed:
    - **Response**:
      ```json
      {
-       "token": "your_jwt_token"
+       "refresh": "generated_refresh_token",
+       "access": "generated_access_token",
      }
      ```
 
 3. **Logout User**
-   - **URL**: `/api/logout/`
+   - **URL**: `/auth/logout/`
    - **Method**: POST
    - **Headers**:
      ```json
@@ -123,7 +124,7 @@ Before running the project, ensure you have the following installed:
 
 ### Role Management APIs
 1. **Assign Role to User**
-   - **URL**: `/api/assign-role/`
+   - **URL**: `/auth/update-role/`
    - **Method**: POST
    - **Input**:
      ```json
@@ -140,7 +141,7 @@ Before running the project, ensure you have the following installed:
      ```
 
 2. **List Roles**
-   - **URL**: `/api/roles/`
+   - **URL**: `/auth/roles/`
    - **Method**: GET
    - **Response**:
      ```json
@@ -155,10 +156,10 @@ Before running the project, ensure you have the following installed:
 
 ## Folder Structure
 ```
-rbac-system/
-├── manage.py
-├── rbac/
+rbac-project/
+├── rbac_project/
 │   ├── __init__.py
+│   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   ├── wsgi.py
@@ -168,9 +169,12 @@ rbac-system/
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
+│   ├── permissions.py
 │   ├── serializers.py
+│   ├── test.py
 │   ├── urls.py
 │   ├── views.py
+├── manage.py
 ```
 
 ---
