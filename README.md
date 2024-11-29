@@ -155,10 +155,10 @@ Before running the project, ensure you have the following installed:
 
 ## Folder Structure
 ```
-rbac-system/
-├── manage.py
-├── rbac/
+rbac-project/
+├── rbac_project/
 │   ├── __init__.py
+│   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   ├── wsgi.py
@@ -168,9 +168,12 @@ rbac-system/
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
+│   ├── permissions.py
 │   ├── serializers.py
+│   ├── test.py
 │   ├── urls.py
 │   ├── views.py
+├── manage.py
 ```
 
 ---
