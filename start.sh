@@ -2,7 +2,7 @@
 
 echo "starting users"
 
-source ./env/Scripts/activate
+source ./venv/Scripts/activate
 
 # pip install -r requirements.txt
 
